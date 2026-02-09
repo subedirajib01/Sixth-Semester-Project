@@ -1,8 +1,9 @@
 .header{
     height:34vw;
+    width:100%;
     margin:30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
+    background: url('/header_image.png') no-repeat center center ;
+    background-size: cover;
     position:relative;
 }
 
@@ -20,18 +21,18 @@
 
 .header-contents h2{
     font-weight: 500;
-    color:white;
+    color:#c1dd9c;
     font-size:max(4.5vw,22px);
 }
 
 .header-contents p{
-    color:white;
+    color:#c1dd9c;
     font-size: 1vw;
 }
 
 .header-contents button{
     border:none;
-    color:#747474;
+    color:#c1dd9c;
     font-weight: 500;
     padding:1vw 2.3vw;
     background-color: white;

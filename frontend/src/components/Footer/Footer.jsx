@@ -3,7 +3,7 @@ import './Footer.css'
 import { assets } from '../../assets/assets'
 
 const Footer = () => {
-  return (
+    return (
     <div className='footer' id='footer'>
         <div className="footer-content">
             <div className="footer-content-left">
@@ -40,7 +40,7 @@ const Footer = () => {
             Copyright 2025 @ Tomato.com - All Rights Reserved.
         </p>
     </div>
-  )
+    )
 }
 
 export default Footer
