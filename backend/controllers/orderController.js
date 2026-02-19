@@ -6,6 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 //placing userorder for frontend
 const placeOrder = async(req, res) =>{
+    const frontend_url = "http://localhost:5173";
     try {
         const newOrder = new orderModel({
             userId: req.body.userId,
@@ -19,10 +20,17 @@ const placeOrder = async(req, res) =>{
     } catch (error) {
         
     }
-
-
 }
-
-export {placeOrder};
+// user orders for frontend 
+const userOrders =async (req,res){
+    try {
+        const orders =await orderModel.find({userId:req.body.userId})
+        res.json({success:true,data:orders})
+    } catch (error) {
+        console.log(error);
+        res.json({success:false,message:"Error"})
+    }
+}
+export {placeOrder,userOrders};
 
 

@@ -1,12 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext,useNavigate } from 'react'
 import './PlaceOrder.css'
 import { StoreContext } from '../../context/StoreContext'
 
 const PlaceOrder = () => {
     const { getTotalCartAmount } = useContext(StoreContext)
+
+
+        const navigate = useNavigate();
+    useEffect(()=>{
+        if(!token){
+            navigate('/cart')
+        }
+        else if(getTotalCartAmount()===0){
+            navigate('/cart')
+        }
+    }[token])
     return (
         <form className='place-order'>
-
             <div className="place-order-left">
                 <p className="title">Delievery Information</p>
                 <div className="multi-fields">
