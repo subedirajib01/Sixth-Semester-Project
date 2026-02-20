@@ -65,7 +65,7 @@ const StoreContextProvider = (props) => {
                 setToken(localStorage.getItem("token"));
                 await loadCartData(localStorage.getItem("token"));
             }
-       
+
         }
         loadData();
     }, []);
