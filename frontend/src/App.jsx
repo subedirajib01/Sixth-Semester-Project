@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import LoginPopup from './components/LoginPopup/LoginPopup';
 import MyOrders from './pages/MyOrders/MyOrders';
 import Verify from './pages/Verify/verify'
+import Contact from './pages/Contact/contact';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path='/Order' element={<PlaceOrder/>}/>
         <Route path='/verify' element={<Verify/>}/>
         <Route path='/MyOrders' element={<MyOrders/>}/>
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
     <Footer/>

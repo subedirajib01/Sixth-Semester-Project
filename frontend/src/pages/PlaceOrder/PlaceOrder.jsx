@@ -26,7 +26,7 @@ const PlaceOrder = () => {
         setData(prev => ({ ...prev, [name]: value }));
     };
 
-    // ✅ Main order + payment handler
+    //  Main order + payment handler
     const placeOrder = async (event) => {
         event.preventDefault();
 
@@ -57,7 +57,7 @@ const PlaceOrder = () => {
             if (response.data.success) {
                 const paymentData = response.data.paymentData;
 
-                // ✅ Create dynamic eSewa form
+                //  Create dynamic eSewa form
                 const form = document.createElement("form");
                 form.method = "POST";
                 form.action = `${import.meta.env.VITE_ESEWA_GATEWAY_URL}/api/epay/main/v2/form`;
@@ -82,7 +82,7 @@ const PlaceOrder = () => {
         }
     };
 
-    // ✅ Redirect if no token or empty cart
+    //  Redirect if no token or empty cart
     useEffect(() => {
         if (!token || getTotalCartAmount() === 0) {
             navigate('/cart');

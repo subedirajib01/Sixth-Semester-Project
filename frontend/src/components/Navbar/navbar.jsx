@@ -25,9 +25,16 @@ const Navbar = ({ setShowLogin }) => {
             {/* MENU */}
             <ul className="navbar-menu">
                 <Link to="/" onClick={() => setMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</Link>
-                <li onClick={() => setMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</li>
-                <li onClick={() => setMenu("Mobile-app")} className={menu === "Mobile-app" ? "active" : ""}>Mobile-app</li>
-                <li onClick={() => setMenu("Contact-us")} className={menu === "Contact-us" ? "active" : ""}>Contact-us</li>
+                <Link to="/" onClick={() => setMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</Link>
+                <Link to="/" onClick={() => setMenu("Mobile-app")} className={menu === "Mobile-app" ? "active" : ""}>Mobile-app</Link>
+                <Link to="/contact" style={{ textDecoration: "none", color: "inherit" }}>
+                <li
+                        onClick={() => setMenu("Contact-us")}
+                        className={menu === "Contact-us" ? "active" : ""}
+                    >
+                    Contact-us
+                    </li>
+</Link>
             </ul>
 
             {/* RIGHT SECTION */}
