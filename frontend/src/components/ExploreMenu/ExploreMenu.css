@@ -9,8 +9,9 @@
     font-weight: 500;
 }
 
-.explore-menu-text{
-    max-width:60%;
+.explore-menu-test{
+    max-width:100%;
+    font-size: 20px;
     columns:#808080;
 }
 
